@@ -11,15 +11,15 @@ import java.util.Locale;
  */
 public class USCalendar {
 	//记录当天月、日、当地环境下一周的第一天是哪一天
-	final int today;
-	final int month;
-	final int firstDayOfWeek;
+	private final int today;
+	private final int month;
+	private final int firstDayOfWeek;
 	//记录当前时间
-	GregorianCalendar d;
+	private GregorianCalendar d;
 	//缩进
-	int indent;
+	private int indent;
 	//记录某天是周几
-	int weekday;
+	private int weekday;
 
 	//构造器
 	public USCalendar()
