@@ -5,7 +5,7 @@ import java.util.GregorianCalendar;
 import java.util.Locale;
 
 /**
- * 应用GregorianCalendar类的程序
+ * 应用GregorianCalendar类的日历程序
  * @author Geec
  * @version 1.0
  */
