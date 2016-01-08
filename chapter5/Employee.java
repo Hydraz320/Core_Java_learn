@@ -7,7 +7,7 @@ public class Employee {
 	private String name;
 	private double salary;
 	private Date hireDay;
-	//¹¹ÔìÆ÷
+	//æ„é€ å™¨
 	public Employee(String name,double salary,int year,int month,int day)
 	{
 		this.name=name;
@@ -15,7 +15,7 @@ public class Employee {
 		GregorianCalendar d=new GregorianCalendar(year,month-1,day);
 		hireDay=d.getTime();
 	}
-	//·ÃÎÊÆ÷
+	//è®¿é—®å™¨
 	public String getName() {
 		return name;
 	}
@@ -27,7 +27,7 @@ public class Employee {
 	public Date getHireDay() {
 		return hireDay;
 	}
-	//ÌáĞ½º¯Êı
+	//æè–ª
 	public void raiseSalary(double byPercent)
 	{
 		salary+=byPercent*salary/100;

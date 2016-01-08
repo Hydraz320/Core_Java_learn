@@ -8,13 +8,13 @@ public class Manager extends Employee {
 		super(name,salary,year,month,day);
 		bonus=0;
 	}
-	//¸´Ð´
+	//è®¿é—®å™¨
 	public double getSalary()
 	{
 		double baseSalary=super.getSalary();
 		return baseSalary+bonus;
 	}
-	//ÐÞ¸ÄÆ÷
+	//ä¿®æ”¹å™¨
 	public void setBonus(double bonus)
 	{
 		this.bonus=bonus;
