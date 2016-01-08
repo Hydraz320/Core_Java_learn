@@ -1,5 +1,7 @@
 package chapter5;
 
+import java.util.Objects;
+
 public class Manager extends Employee {
 	private double bonus;
 	
@@ -19,4 +21,20 @@ public class Manager extends Employee {
 	{
 		this.bonus=bonus;
 	}
+	@Override
+	public boolean equals(Object otherObject) {
+		if(!super.equals(otherObject))return false;
+		Manager other=(Manager)otherObject;
+		return bonus==other.bonus;
+	}
+	@Override
+	public int hashCode() {
+		return super.hashCode()+17*Objects.hash(bonus);
+	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString()+"[bonus="+bonus+"]";
+	}
+	
 }

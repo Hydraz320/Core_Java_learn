@@ -2,6 +2,7 @@ package chapter5;
 
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.Objects;
 
 public class Employee extends Person {
 	private double salary;
@@ -32,4 +33,29 @@ public class Employee extends Person {
 	public String getDiscription() {
 		return String.format("an employee with a salary of %.2f", salary);
 	}
+
+	@Override
+	public boolean equals(Object otherObject) {
+		if(this==otherObject)return true;
+		if(otherObject==null)return false;
+		if(getClass()!=otherObject.getClass())
+			return false;
+		Employee other=(Employee)otherObject;
+		return Objects.equals(this.getName(), other.getName())
+				&&salary==other.salary
+				&&Objects.equals(hireDay, other.hireDay);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(this.getName(),salary,hireDay);
+	}
+
+	@Override
+	public String toString() {
+		return getClass().getName()+"[name="+this.getName()+
+				",salary="+salary+",hireDay="+hireDay+"]";
+	}
+	
+	
 }
